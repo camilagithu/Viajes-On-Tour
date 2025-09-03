@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Viajes On Tour · One Page</title>
+
+    <!-- Conexión al CSS -->
+    <link rel="stylesheet" href="assets/css/site.css">
+  </head>
+  <body>
+
+    <!-- NAV -->
+    <header>
+      <div class="container">
+        <nav id="mainNav" aria-label="Navegación principal">
+          <a href="#inicio">Viajes On Tour</a>
+          <ul>
+            <li><a href="#giras">Giras</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- INICIO -->
+    <section class="hero" id="inicio">
+      <div class="container">
+        <h1>Giras de estudio con transparencia y seguridad</h1>
+        <p class="lead">Pagos claros, comunicación con apoderados y acceso a documentación clave.</p>
+        <p><a class="btn" href="#giras">Ver giras</a></p>
+      </div>
+    </section>
+
+    <!-- GIRAS -->
+    <section id="giras">
+      <div class="container">
+        <h2 class="section-title">Giras destacadas</h2>
+        <div class="grid">
+          <article class="card">
+            <img src="https://picsum.photos/seed/vina/800/450" alt="Valparaíso">
+            <div class="body">
+              <h3>Gira Científica – Valparaíso</h3>
+              <p>Visita a museos y laboratorios costeros.</p>
+              <div class="cta"><a class="btn" href="#contacto">Cotizar</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/serena/800/450" alt="La Serena">
+            <div class="body">
+              <h3>Gira Histórica – La Serena</h3>
+              <p>Patrimonio colonial y observatorio.</p>
+              <div class="cta"><a class="btn" href="#contacto">Cotizar</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/pucon/800/450" alt="Pucón">
+            <div class="body">
+              <h3>Gira Medioambiental – Pucón</h3>
+              <p>Parques, termas y educación ambiental.</p>
+              <div class="cta"><a class="btn" href="#contacto">Cotizar</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros">
+      <div class="container">
+        <h2 class="section-title">Nosotros</h2>
+        <p>Agencia con foco en seguridad, trazabilidad de pagos y comunicación con apoderados.</p>
+        <ul class="list">
+          <li>10+ años de experiencia</li>
+          <li>95% de satisfacción</li>
+          <li>100% transparencia</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog">
+      <div class="container">
+        <h2 class="section-title">Blog / Noticias</h2>
+        <div class="grid">
+          <article class="card">
+            <img src="https://picsum.photos/seed/raffle/800/450" alt="Rifa solidaria">
+            <div class="body">
+              <h3>Cómo organizar una rifa solidaria</h3>
+              <p>Tips prácticos para recaudar fondos de forma eficiente.</p>
+              <div class="cta"><a class="btn outline" href="#contacto">Quiero saber más</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/blog2/800/450" alt="Checklist viaje">
+            <div class="body">
+              <h3>Checklist previo al viaje</h3>
+              <p>Documentos, seguros y pagos al día antes de viajar.</p>
+              <div class="cta"><a class="btn outline" href="#contacto">Quiero saber más</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+      <div class="container" style="max-width:720px">
+        <h2 class="section-title">Contáctanos</h2>
+        <form id="form-contacto" novalidate>
+          <div class="field">
+            <label for="ct-name">Nombre</label>
+            <input id="ct-name" type="text" maxlength="100" required>
+            <small id="err-ct-name" class="error"></small>
+          </div>
+          <div class="field">
+            <label for="ct-email">Correo</label>
+            <input id="ct-email" type="email" maxlength="100" required>
+            <small class="help">Permitidos: @duoc.cl, @profesor.duoc.cl, @gmail.com</small>
+            <small id="err-ct-email" class="error"></small>
+          </div>
+          <div class="field">
+            <label for="ct-msg">Comentario</label>
+            <textarea id="ct-msg" rows="5" maxlength="500" required></textarea>
+            <small id="err-ct-msg" class="error"></small>
+          </div>
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 Viajes On Tour • contacto@viajesontour.cl • +56 9 3345 1122</p>
+      </div>
+    </footer>
+
+    <!-- Conexión al JS -->
+    <script type="module" src="assets/js/onepage.js"></script>
+  </body>
+</html>
