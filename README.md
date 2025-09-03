@@ -31,9 +31,13 @@ Su objetivo es apoyar la gestión de giras de estudio mediante una interfaz clar
 ## Estructura del proyecto
 
 Viajes-On-Tour/
+
 ├── index.html
+
 ├── assets/
+
 │ ├── css/site.css
+
 │ └── js/{onepage.js, validations.js}
 
 
