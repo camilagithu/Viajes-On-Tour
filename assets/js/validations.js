@@ -1,4 +1,4 @@
-// ===== Reglas de validación en JS (sin usar required de HTML) =====
+// ===== Reglas de validación en JS  =====
 
 /**
  * Campo requerido: retorna mensaje si está vacío.
