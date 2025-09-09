@@ -1,6 +1,6 @@
 ## Viajes On Tour 
 
-Proyecto académico que consiste en una **landing page responsiva** para la agencia *Viajes On Tour*.  
+Proyecto académico que consiste en una pagina web html para la agencia *Viajes On Tour*.  
 El sitio permite mostrar giras de estudio, información de la agencia, un blog/noticias y un formulario de contacto con validaciones en **JavaScript**.
 
 ---
@@ -25,9 +25,9 @@ El sitio permite mostrar giras de estudio, información de la agencia, un blog/n
 ---
 
 ## Tecnologías
-- **HTML5**  
-- **CSS3**  
-- **JavaScript (ES6 Módulos)**  
+- **HTML**  
+- **CSS**  
+- **JavaScript**  
 - Deploy con **GitHub Pages**
 
 ---
@@ -51,7 +51,3 @@ Viajes-On-Tour/
 
 Fabiola Villagra 
 Camila Vera 
-
-
-b.com/camilagithu/Viajes-On-Tour.git
-
