@@ -1,4 +1,4 @@
-## Viajes On Tour · One Page
+## Viajes On Tour 
 
 Proyecto académico que consiste en una **landing page responsiva** para la agencia *Viajes On Tour*.  
 El sitio permite mostrar giras de estudio, información de la agencia, un blog/noticias y un formulario de contacto con validaciones en **JavaScript**.
