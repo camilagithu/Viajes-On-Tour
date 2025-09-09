@@ -1,17 +1,42 @@
-export function required(value, name = "Campo") {
-  return (!value || String(value).trim() === "") ? `${name} es requerido` : "";
+// ===== Reglas de validación en JS (sin usar required de HTML) =====
+
+/**
+ * Campo requerido: retorna mensaje si está vacío.
+ * @param {string} valor
+ * @param {string} nombreCampo
+ * @returns {string} mensaje de error o cadena vacía
+ */
+export function requerido(valor, nombreCampo = "Campo") {
+  return (!valor || String(valor).trim() === "") ? `${nombreCampo} es requerido` : "";
 }
 
-export function emailDomain(email) {
-  if (!email) return "El correo es requerido";
-  if (email.length > 100) return "El correo excede 100 caracteres";
-  return /@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/i.test(email)
+/**
+ * Valida correo por formato básico y dominio permitido.
+ * Dominios permitidos: duoc.cl, profesor.duoc.cl, gmail.com
+ * @param {string} correo
+ * @returns {string} mensaje de error o cadena vacía
+ */
+export function dominioCorreo(correo) {
+  if (!correo) return "El correo es requerido";
+  if (correo.length > 100) return "El correo excede 100 caracteres";
+
+  // formato básico de email (suficiente para frontend)
+  const formatoBasico = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!formatoBasico.test(correo)) return "Formato de correo no válido";
+
+  // dominios permitidos
+  return /@(duocuc\.cl|profesor\.duoc\.cl|gmail\.com|hotmail\.com)$/i.test(correo)
     ? ""
-    : "Dominio no permitido (duoc.cl / profesor.duoc.cl / gmail.com)";
+    : "usa un correo valido (duocuc.cl / profesor.duoc.cl / gmail.com / hotmail.com)";
 }
 
-export function commentMax500(text) {
-  const base = required(text, "Comentario");
+/**
+ * Comentario con máximo 500 caracteres (y requerido).
+ * @param {string} texto
+ * @returns {string} mensaje de error o cadena vacía
+ */
+export function comentarioMax500(texto) {
+  const base = requerido(texto, "Comentario");
   if (base) return base;
-  return text.length > 500 ? "Comentario excede 500 caracteres" : "";
+  return texto.length > 500 ? "Comentario excede 500 caracteres" : "";
 }

@@ -1,20 +1,17 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Viajes On Tour · One Page</title>
-
-    <!-- Conexión al CSS -->
-    <link rel="stylesheet" href="assets/css/site.css">
+    <link rel="stylesheet" href="assets/css/site.css" />
   </head>
   <body>
-
     <!-- NAV -->
     <header>
       <div class="container">
         <nav id="mainNav" aria-label="Navegación principal">
-          <a href="#inicio">Viajes On Tour</a>
+          <a class="brand" href="#inicio"><span>Viajes On Tour</span></a>
           <ul>
             <li><a href="#giras">Giras</a></li>
             <li><a href="#nosotros">Nosotros</a></li>
@@ -40,7 +37,7 @@
         <h2 class="section-title">Giras destacadas</h2>
         <div class="grid">
           <article class="card">
-            <img src="https://picsum.photos/seed/vina/800/450" alt="Valparaíso">
+            <img src="https://picsum.photos/seed/valparaiso/1200/675" alt="Valparaíso - Gira científica" loading="lazy">
             <div class="body">
               <h3>Gira Científica – Valparaíso</h3>
               <p>Visita a museos y laboratorios costeros.</p>
@@ -48,18 +45,18 @@
             </div>
           </article>
           <article class="card">
-            <img src="https://picsum.photos/seed/serena/800/450" alt="La Serena">
+            <img src="https://picsum.photos/seed/pucon/1200/675" alt="Pucón - Educación ambiental" loading="lazy">
             <div class="body">
-              <h3>Gira Histórica – La Serena</h3>
-              <p>Patrimonio colonial y observatorio.</p>
+              <h3>Gira Medioambiental – Pucón</h3>
+              <p>Parques, termas y educación ambiental.</p>
               <div class="cta"><a class="btn" href="#contacto">Cotizar</a></div>
             </div>
           </article>
           <article class="card">
-            <img src="https://picsum.photos/seed/pucon/800/450" alt="Pucón">
+            <img src="https://picsum.photos/seed/laserena/1200/675" alt="La Serena - Observatorio" loading="lazy">
             <div class="body">
-              <h3>Gira Medioambiental – Pucón</h3>
-              <p>Parques, termas y educación ambiental.</p>
+              <h3>Gira Histórica – La Serena</h3>
+              <p>Patrimonio colonial y visita a observatorio.</p>
               <div class="cta"><a class="btn" href="#contacto">Cotizar</a></div>
             </div>
           </article>
@@ -85,16 +82,25 @@
       <div class="container">
         <h2 class="section-title">Blog / Noticias</h2>
         <div class="grid">
+          <!-- Rifa solidaria -->
           <article class="card">
-            <img src="https://picsum.photos/seed/raffle/800/450" alt="Rifa solidaria">
+            <img
+              src="https://picsum.photos/seed/raffle/800/450" alt="Rifa solidaria"
+              alt="Rifa solidaria - venta de números para recaudar fondos"
+              loading="lazy">
             <div class="body">
               <h3>Cómo organizar una rifa solidaria</h3>
               <p>Tips prácticos para recaudar fondos de forma eficiente.</p>
               <div class="cta"><a class="btn outline" href="#contacto">Quiero saber más</a></div>
             </div>
           </article>
+
+          <!-- Viaje / Cordillera en Chile -->
           <article class="card">
-            <img src="https://picsum.photos/seed/blog2/800/450" alt="Checklist viaje">
+            <img
+              src="https://picsum.photos/seed/blog2/800/450" alt="Checklist viaje"
+              alt="Cordillera de los Andes en Chile - inspiración para viajes de estudio"
+              loading="lazy">
             <div class="body">
               <h3>Checklist previo al viaje</h3>
               <p>Documentos, seguros y pagos al día antes de viajar.</p>
@@ -112,19 +118,16 @@
         <form id="form-contacto" novalidate>
           <div class="field">
             <label for="ct-name">Nombre</label>
-            <input id="ct-name" type="text" maxlength="100" required>
-            <small id="err-ct-name" class="error"></small>
+            <input id="ct-name" type="text" maxlength="100">
           </div>
           <div class="field">
             <label for="ct-email">Correo</label>
-            <input id="ct-email" type="email" maxlength="100" required>
+            <input id="ct-email" type="email" maxlength="100">
             <small class="help">Permitidos: @duoc.cl, @profesor.duoc.cl, @gmail.com</small>
-            <small id="err-ct-email" class="error"></small>
           </div>
           <div class="field">
             <label for="ct-msg">Comentario</label>
-            <textarea id="ct-msg" rows="5" maxlength="500" required></textarea>
-            <small id="err-ct-msg" class="error"></small>
+            <textarea id="ct-msg" rows="5" maxlength="500"></textarea>
           </div>
           <button class="btn" type="submit">Enviar</button>
         </form>
@@ -137,7 +140,20 @@
       </div>
     </footer>
 
-    <!-- Conexión al JS -->
+
+    <!-- POPUP (modal) -->
+    <div id="popup-overlay" class="popup-overlay" style="display:none" aria-hidden="true">
+      <div id="popup-content" class="popup-content" role="dialog" aria-labelledby="popup-title" aria-describedby="popup-message">
+        <h2 id="popup-title">Mensaje</h2>
+        <p id="popup-message"></p>
+        <button id="popup-close" class="popup-close" type="button">Cerrar</button>
+      </div>
+    </div>
+  
+    <!-- Carga JS (con módulos) -->
     <script type="module" src="assets/js/onepage.js"></script>
+
+
   </body>
 </html>
+
